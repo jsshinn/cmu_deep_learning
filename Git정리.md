@@ -1,8 +1,8 @@
 # Git린이 Github 사용기
 
-## 준비물 :
+## **준비물 :**
 
-Terminal
+**Terminal**
 
 * Editor: vim, emacs, nano
 
@@ -15,17 +15,23 @@ Terminal
 ( SSH key 설정 참고 : <https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent>)
 
 * Github 사이트 Setting 들어가서 설정해서 id_rsa.pub안의 key를 복사/붙여넣기 하면 된다.
-* 환경 설정 방법 :
-  * ~/.gitconfig 
+* 환경 설정 방법 :vim 에디터로 직접 들어가서 [alias] 탭에 설정값 추가 가능
+  * vim ~/.gitconfig 
 
 
 
 ## 2. Git 주요 사용 명령어
 
+*  git log --oneline --decorate --graph --all
+
 * git branch -r :
 
   * -r : remote상에 있는 branch를 다 보여줌
   * -a : local / remote 상에 있는 모든 branch 보여줌
+
+* git chekout (branch):
+
+  * checkout 자체가 HEAD를 이동시키는 것
 
 * git pull options repository ref : (ex) git pull origin develop-sjs)
 
@@ -37,6 +43,10 @@ Terminal
 
     (git add . 하면 모든 파일이 add 되므로 하면 안됨!)
 
+  * line 별로 변경사항을 나누어 y,q,s에 따라 hunk 덩어리 설정.
+
+    (y: yes?/ keep going , q: Quit?, s:split) 
+
 * git commit -s -v 
 
   * tracked 파일을 staged로 변경하기 위해 commit을 진행.
@@ -45,7 +55,7 @@ Terminal
 
   * 이 안에서 편집기에 따라 사용 방법이 조금 다름
 
-    * vim 인 경우 : esc로 편집 모드 -> 수정 사항 입력 -> :w 저장 -> :q 나가기
+    * vim 인 경우 : a로 편집 모드 -> 수정 사항 입력 -> :w 저장 -> :q 나가기 (vi :x)
     * nano 인 경우 : 수정 사항 입력 -> ctrl+o 저장 -> ctrl+x 나가기
 
 * git push option remote repositor
