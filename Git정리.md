@@ -22,7 +22,12 @@ Terminal
 
 ## 2. Git 주요 사용 명령어
 
-* git pull
+* git branch -r :
+
+  * -r : remote상에 있는 branch를 다 보여줌
+  * -a : local / remote 상에 있는 모든 branch 보여줌
+
+* git pull options repository ref : (ex) git pull origin develop-sjs)
 
   * Remote repository 상의 HEAD와 내 branch가 일치하지 않을 수 있으므로 변경사항 업데이트를 위해 우선 pull 부터 먼저 하자
 
@@ -36,7 +41,7 @@ Terminal
 
   * tracked 파일을 staged로 변경하기 위해 commit을 진행.
 
-    (git commit -m "어쩌구" 보다는 친절하게 -s -v로 변경사항 설명해주는게 보기 편함)
+    (git commit -m "blahblah" 보다는 -s : sign-off +  -v : 한번더 체크로 변경사항 설명)
 
   * 이 안에서 편집기에 따라 사용 방법이 조금 다름
 
